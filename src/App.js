@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import HousesList from './components/HousesList';
 import SingleHouse from './components/SingleHouse';
+import AddHouse from './components/AddHouse';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Main}/>
           <Switch>
             <Route exact path="/houses-list" component={HousesList} />
+            <Route exact path="/create-house" component={AddHouse} />
             <Route exact path="/single-house/:houseId" component={SingleHouse} />
           </Switch>
         </Router>

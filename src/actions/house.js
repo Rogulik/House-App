@@ -39,7 +39,7 @@
   };
   
   
-  export const createHouse = (formData, history) => async (dispatch) => {
+  export const createHouse = (formData) => async (dispatch) => {
     try {
       const res = await axios.post(`http://mr-test-backend.sadek.usermd.net/houses`, formData);
   
@@ -48,7 +48,6 @@
         payload: res.data,
       });
   
-      history.push(`/houses-list`);
     } catch (error) {
       dispatch({
         type: ERROR_HOUSES,

@@ -23,6 +23,7 @@ const HousesList = ({
    return houses ? (
         <div>
             <h1>List of houses</h1>
+            <NavLink to="/create-house">CreateHouse</NavLink>
            {houses.map(house => (
                <div key={house._id}>
                    <NavLink to={`/single-house/${house._id}`} style={{fontSize:"3rem"}}>Address: {house.address}</NavLink>
@@ -31,7 +32,10 @@ const HousesList = ({
            ))}
         </div>
     ) : (
-        <p>No houses on the list</p>
+        <>
+            <p>No houses on the list</p>
+            <NavLink to="/create-house">CreateHouse</NavLink>
+         </>
     )
 }
 
