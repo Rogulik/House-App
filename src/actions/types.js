@@ -1,0 +1,5 @@
+    export const CREATE_HOUSE = "CREATE_HOUSE"
+    export const GET_HOUSES = "GET_HOUSES"
+    export const GET_HOUSE = "GET_HOUSE"
+    export const DELETE_HOUSE = "DELETE_HOUSE"
+    export const ERROR_HOUSES = "ERROR_HOUSES"

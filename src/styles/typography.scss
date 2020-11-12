@@ -1,0 +1,55 @@
+@import './index.scss';
+
+%heading {
+    font-family: $font-display;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3rem;
+    color:#000;
+    line-height: 1;
+    font-weight: 1000;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 1.8rem;
+    color: rgb(0, 162, 255);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: 0px;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
+}
+
+.btn {
+    color: rgb(0, 162, 255);
+    border: 3px solid rgb(0, 162, 255);
+    border-radius: 0;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    font: 800;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 2rem;
+
+}
