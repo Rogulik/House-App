@@ -8,16 +8,13 @@ const HousesList = ({
     getHouses,
     deleteHouse,
     houses,
-    history
 }) => {
     useEffect(() => {
         getHouses()
-    },[])
+    },[houses])
 
     const onClick = (id) => {
         deleteHouse(id)
-        history.push('/houses-list')
-        getHouses()
     }
 
    return houses ? (

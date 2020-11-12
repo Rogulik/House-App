@@ -1,5 +1,4 @@
 import React,{ useState } from 'react'
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createHouse } from '../actions/house'
@@ -9,20 +8,15 @@ const AddHouse = ({
     createHouse,
     history
 }) => {
-  const blankHouse = {
-        "address": "string",
-        "owner": "string",
-        "price": "string",
-        "area": 0
-    }
     const [address, setAdress] = useState("");
     const [owner, setOwner] = useState("");
     const [price, setPrice] = useState("");
     const [area, setArea] = useState("");
 
     const onSubmit = (e) => {
+        
         e.preventDefault();
-        createHouse(history, {
+        createHouse({
             address,
             owner,
             price,
@@ -33,6 +27,7 @@ const AddHouse = ({
 
       const onChange = (e,setValue) => {
         setValue(e.target.value)
+        
       }
 
     return (

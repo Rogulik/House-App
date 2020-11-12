@@ -18,11 +18,16 @@ import {
   
     switch (type) {
       case GET_HOUSES:
-      case CREATE_HOUSE:
         return {
           ...state,
           houses: payload,
           loading: false,
+        };
+    case CREATE_HOUSE:
+        return {
+            ...state,
+            houses: [payload, ...state.houses],
+            loading: false,
         };
       case GET_HOUSE:
         return {

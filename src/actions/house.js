@@ -47,6 +47,8 @@
         type: CREATE_HOUSE,
         payload: res.data,
       });
+
+      
   
     } catch (error) {
       dispatch({
